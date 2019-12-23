@@ -13,7 +13,7 @@ class WebImagesTests: XCTestCase {
     
     func testConnect() {
         let exp = self.expectation(description: #function)
-        DuckDuckGoImages.search(term: "bob dylan") { results in
+        WebImages.search(term: "bob dylan") { results in
             let images = try! results.get()
             self.parseWebImages(images) {
                 exp.fulfill()

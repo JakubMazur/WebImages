@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class DuckDuckGoImages: NSObject {
+public class WebImages: NSObject {
     
     public static func search(term: String, _ completion:@escaping(Result<[WebImage],Error>) -> Void) {
         let session: URLSession = URLSession.shared
