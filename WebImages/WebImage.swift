@@ -20,7 +20,7 @@ public struct WebImage {
         self.url = url
     }
     
-    func get(_ completion:@escaping(UIImage?) -> Void) {
+    public func get(_ completion:@escaping(UIImage?) -> Void) {
         let dataTask = URLSession.shared.dataTask(with: self.url) { (data, response, error) in
             if let data = data {
                 let image = UIImage(data: data)
