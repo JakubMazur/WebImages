@@ -24,9 +24,13 @@ public struct WebImage {
         let dataTask = URLSession.shared.dataTask(with: self.url) { (data, response, error) in
             if let data = data {
                 let image = UIImage(data: data)
-                completion(image)
+                DispatchQueue.main.async {
+                    completion(image)
+                }
             } else {
-                completion(nil)
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
             }
         }
         dataTask.resume()

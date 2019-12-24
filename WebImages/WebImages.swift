@@ -21,9 +21,13 @@ public class WebImages: NSObject {
         let dataTask = session.dataTask(with: url) { (data, response, error) in
             do {
                 let images = try Parser.parse(data: data)
-                completion(.success(images))
+                DispatchQueue.main.async {
+                    completion(.success(images))
+                }
             } catch {
-                completion(.failure(WebImagesError.unexpectedResponse(error)))
+                DispatchQueue.main.async {
+                    completion(.failure(WebImagesError.unexpectedResponse(error)))
+                }
             }
         }
         dataTask.resume()
