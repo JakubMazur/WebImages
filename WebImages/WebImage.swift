@@ -13,7 +13,7 @@ public struct WebImage {
     let url: URL
     
     init?(_ urlString: String?) {
-        guard let urlString = urlString else { return nil }
+        guard let urlString = urlString, urlString != "" else { return nil }
         guard let url = URL(string: "https:" + urlString) else {
             return nil
         }
