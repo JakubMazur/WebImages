@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		DD25117823B13C000075BEA0 /* WebImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25117723B13C000075BEA0 /* WebImages.swift */; };
 		DD25117A23B13D940075BEA0 /* WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25117923B13D940075BEA0 /* WebImage.swift */; };
 		DD25117C23B1766A0075BEA0 /* NSRegularExpression+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25117B23B1766A0075BEA0 /* NSRegularExpression+Extensions.swift */; };
-		DD25118323B17B020075BEA0 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD25118223B17B020075BEA0 /* SwiftSoup.framework */; };
+		DD25118323B17B020075BEA0 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD25118223B17B020075BEA0 /* SwiftSoup.framework */; platformFilter = ios; };
 		DD25118B23B17BF70075BEA0 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD25118A23B17BF70075BEA0 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
@@ -146,7 +146,6 @@
 				DD25114123B138F80075BEA0 /* Sources */,
 				DD25114223B138F80075BEA0 /* Frameworks */,
 				DD25114323B138F80075BEA0 /* Resources */,
-				DD25118623B17B0A0075BEA0 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -229,29 +228,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		DD25118623B17B0A0075BEA0 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"$(SRCROOT)/input.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = Carthage;
-			outputFileListPaths = (
-				"$(SRCROOT)/output.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD25114123B138F80075BEA0 /* Sources */ = {
@@ -425,7 +401,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.6;
+				MARKETING_VERSION = 0.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = pl.jkmazur.WebImages;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -456,7 +432,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.6;
+				MARKETING_VERSION = 0.1.7;
 				PRODUCT_BUNDLE_IDENTIFIER = pl.jkmazur.WebImages;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
